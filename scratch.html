@@ -21,7 +21,7 @@
     </div>
     
     <div class="link-box">
-        <a href="https://parkerstamper.github.io/is201project/" target="_blank">Click Here to Visit My Resume</a>
+        <a href="file:///Users/parkerstamper/Downloads/startbootstrap-freelancer-gh-pages/index.html" target="_blank">Click Here to Visit My Resume</a>
     </div>
     
 
@@ -116,21 +116,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Occupational Therapy Wordle Game</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        #word-grid {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .guess-row {
+            display: flex;
+            justify-content: center;
+            margin: 5px 0;
+        }
+
+        .guess-cell {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            margin: 0 5px;
+        }
+
+        input {
+            font-size: 20px;
+            padding: 10px;
+            width: 200px;
+            margin: 10px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
+    <h1>Occupational Therapy Wordle Game</h1>
+    <p>Guess the 5-letter word related to Occupational Therapy!</p>
 
-    <div class="game-container">
-        <h1>Occupational Therapy Wordle Game</h1>
-        <p>Guess the 5-letter word related to Occupational Therapy!</p>
+    <!-- Guess Input and Submit Button -->
+    <input type="text" id="guess-input" maxlength="5" placeholder="Enter a 5-letter word">
+    <button id="submit-guess">Submit Guess</button>
 
-        <!-- Guess Input and Submit Button -->
-        <input type="text" id="guess-input" maxlength="5" placeholder="Enter a 5-letter word">
-        <button id="submit-guess">Submit Guess</button>
-
-        <div id="word-grid"></div>
-        <p id="message"></p>
-    </div>
+    <div id="word-grid"></div>
+    <p id="message"></p>
 
     <script>
         const words = ["rehab", "adapt", "train", "touch", "motor", "study", "focus", "craft", "skill"]; // Only 5-letter words
@@ -212,9 +259,7 @@
 
         createGrid();
     </script>
-
 </body>
 </html>
-
 
 
